@@ -1,0 +1,50 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/Employees",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "localhost",
+      "DownstreamPort": 5050,
+      "UpstreamPathTemplate": "/colaboradores",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Employees/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "localhost",
+      "DownstreamPort": 5050,
+      "UpstreamPathTemplate": "/colaboradores/{id}",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/values/",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "localhost",
+      "DownstreamPort": 5050,
+      "UpstreamPathTemplate": "/check",
+      "UpstreamHttpMethod": [
+        "GET"
+      ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    }
+  ],
+  "GlobalConfiguration": {}
+}
