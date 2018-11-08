@@ -9,10 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CacheManager.Core" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
-    <PackageReference Include="Ocelot" Version="2.0.1" />
+    <PackageReference Include="Ocelot" Version="12.0.1" />
   </ItemGroup>
 
 </Project>

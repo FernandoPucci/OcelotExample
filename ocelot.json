@@ -3,48 +3,56 @@
     {
       "DownstreamPathTemplate": "/api/Employees",
       "DownstreamScheme": "http",
-      "DownstreamHost": "localhost",
-      "DownstreamPort": 5050,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5050
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      },
       "UpstreamPathTemplate": "/colaboradores",
       "UpstreamHttpMethod": [
         "GET"
-      ],
-      "QoSOptions": {
-        "ExceptionsAllowedBeforeBreaking": 3,
-        "DurationOfBreak": 10,
-        "TimeoutValue": 5000
-      }
+      ]
     },
     {
-      "DownstreamPathTemplate": "/api/Employees/{id}",
+      "DownstreamPathTemplate": "/api/Employees/{ch}",
       "DownstreamScheme": "http",
-      "DownstreamHost": "localhost",
-      "DownstreamPort": 5050,
-      "UpstreamPathTemplate": "/colaboradores/{id}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5050
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      },
+      "UpstreamPathTemplate": "/colaboradores/{ch}",
       "UpstreamHttpMethod": [
         "GET"
-      ],
-      "QoSOptions": {
-        "ExceptionsAllowedBeforeBreaking": 3,
-        "DurationOfBreak": 10,
-        "TimeoutValue": 5000
-      }
+      ]
     },
     {
-      "DownstreamPathTemplate": "/api/values/",
+      "DownstreamPathTemplate": "/api/values",
       "DownstreamScheme": "http",
-      "DownstreamHost": "localhost",
-      "DownstreamPort": 5050,
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5050
+        }
+      ],
+      "QoSOptions": {
+        "TimeoutValue": 360000
+      },
       "UpstreamPathTemplate": "/check",
       "UpstreamHttpMethod": [
         "GET"
-      ],
-      "QoSOptions": {
-        "ExceptionsAllowedBeforeBreaking": 3,
-        "DurationOfBreak": 10,
-        "TimeoutValue": 5000
-      }
+      ]
     }
   ],
-  "GlobalConfiguration": {}
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5000"
+  }
 }
