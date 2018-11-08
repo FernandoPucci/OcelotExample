@@ -28,6 +28,7 @@ namespace OcelotExample
                     .AddJsonFile("appsettings.json", true, true)
                     .AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", true, true)
                     .AddJsonFile("ocelot.json")
+                    .AddJsonFile("ocelot.1.json")
                     .AddEnvironmentVariables();
             })
             .ConfigureServices(s => {

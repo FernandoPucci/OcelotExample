@@ -33,23 +33,6 @@
       "UpstreamHttpMethod": [
         "GET"
       ]
-    },
-    {
-      "DownstreamPathTemplate": "/api/values",
-      "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "localhost",
-          "Port": 5050
-        }
-      ],
-      "QoSOptions": {
-        "TimeoutValue": 360000
-      },
-      "UpstreamPathTemplate": "/check",
-      "UpstreamHttpMethod": [
-        "GET"
-      ]
     }
   ],
   "GlobalConfiguration": {
